@@ -16,7 +16,7 @@ class RwkvCommon {
     final dio = Dio();
     final regReason = RegExp(r'"reasoning_content"\s*:\s*"((?:[^"\\]|\\.)*)"');
     final regContent = RegExp(r'"content"\s*:\s*"((?:[^"\\]|\\.)*)"');
-    final regReferences = RegExp(r'"references"\s*:\s*(\[[\s\S]*?\])');
+    final regReferences = RegExp(r'"references"\s*:\s*(\[(?:[\s\S]*?\}\])\s*)');
 
     StringBuffer choices = StringBuffer();
     bool hasReferences = false;
